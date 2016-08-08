@@ -1,0 +1,108 @@
+<mvc:View
+	controllerName="SolBP.controller.LocalUserManagement"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core"
+	xmlns:m="sap.m"
+	class="viewPadding">
+		<u:Shell
+			id="mShell"
+			showCurtain="true"
+			icon="https://sapui5.hana.ondemand.com/sdk/resources/sap/ui/core/mimes/logo/sap_50x26.png">
+			<u:headItems>				
+				<u:ShellHeadItem
+					tooltip="Home"
+					icon="sap-icon://home" />				
+			</u:headItems>
+			<u:headEndItems>
+				<u:ShellHeadItem
+					icon="sap-icon://search"
+					tooltip="search"
+					press="handleSearchPress" />
+			</u:headEndItems>
+			<u:user>
+				<u:ShellHeadUserItem
+					image="sap-icon://person-placeholder"
+					username="Yafang Li"
+					press="handleUserItemPressed" />
+			</u:user>
+			<u:curtainContent>
+				<Page
+					showNavButton="true"
+					title="Local User Management">
+					<ObjectHeader
+						title="Smart Components"
+						condensed="true">
+						<attributes>
+							<ObjectAttribute text="CAAM's bucket" />
+						</attributes>
+					</ObjectHeader>
+					<content>
+						<IconTabBar
+							id="idTabs"
+							expandable="false"
+							applyContentPadding="false">
+							<items>
+								<IconTabFilter
+									key="general"
+									showAll="false"
+									text="General"/>							
+								<IconTabFilter
+									id="userTab"
+									key="users"
+									count="{localUserView>/countAssigned}"
+									text="Assigned Business Users"/>	
+							</items>
+						</IconTabBar>
+						<Table
+							id="table"
+							busy="{localUserView>/busy}"
+							class="sapUiResponsiveMargin sapUiNoMarginTop"
+							items="{/UserInfo}"
+							noDataText="No Data"
+							updateFinished="onUpdateFinished"
+							width="auto"
+							mode="MultiSelect"
+							selectionChange="onSelectionChange"
+							>
+							<headerToolbar>
+								<Toolbar>
+									<Title text="Users({localUserView>/countAssigned})" />
+									<ToolbarSpacer/>
+									<Button text="Add" type="Transparent" press="onAdd" />
+									<Button enabled="{localUserView>/editEnabled}" text="Edit" type="Transparent" press="onEdit" />
+									<Button text="Remove" type="Transparent" press="onRemove" />
+									<Button icon="sap-icon://sort" type="Transparent" press="onSort" />
+									<Button icon="sap-icon://action-settings" type="Transparent" press="onSettings" />
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column id="userColumn" width="20rem">
+									<Text id="userColumnTitle"
+										text="User" />
+								</Column>
+								<Column id="emailColumn" width="30rem">
+									<Text id="emailColumnTitle"
+										text="Email Address" />
+								</Column>
+								<Column id="roleColumn">
+									<Text id="roleColumnTitle"
+										text="Business Role" />
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{FirstName} {LastName}" />
+										<Text text="{Email}" />
+										<Text text="{Collections}" />
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Page>
+			</u:curtainContent>
+		</u:Shell>
+</mvc:View>

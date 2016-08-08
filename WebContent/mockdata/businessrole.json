@@ -1,0 +1,16 @@
+{
+	"BusinessRole": [
+		{
+			"roleId": 1,
+			"name": "Chief Supply Chain Manager"
+		},
+		{
+			"roleId": 2,
+			"name": "Local Administrator"
+		},
+		{
+			"roleId": 3,
+			"name": "Local Administrator"
+		}
+	]
+}

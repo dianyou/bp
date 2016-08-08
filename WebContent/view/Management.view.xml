@@ -1,0 +1,62 @@
+<mvc:View 
+	controllerName="SolBP.controller.Management"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core" 	
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:semantic="sap.m.semantic">
+	<Page
+		id="page"
+		title="{i18n>title}"
+		busy="{managementView>/busy}">
+		<content>			
+						
+			<IconTabBar
+				id="idIconTabBarNoIcons"
+				select="handleIconTabBarSelect"
+				expandable="false"
+				applyContentPadding="false">
+				<items>
+					<IconTabFilter
+						key="joined"
+						text="Member"/>							
+					<IconTabFilter
+						key="pending"
+						text="Pending"/>
+					<IconTabFilter
+						key="expired"
+						text="Invitation Expired"/>			
+				</items>
+			</IconTabBar>
+			<Toolbar class="searchField">
+				<SearchField
+					liveChange="onSearch"
+					width="30%"/>
+				<Button text="Invite New Business Partner"
+					class="inviteBtn"
+					press="onInvitePress">				
+				</Button>
+			</Toolbar>
+			<List
+				id="list"
+				items="{/list}"
+				class="listContainer">
+				<CustomListItem class="listItem">
+					<HBox>
+						<core:Icon size="1rem" src="{
+							path: 'status',
+							formatter: '.formatter.memberIcon'
+						}" 
+						color="{
+							path: 'status',
+							formatter: '.formatter.memberIconColor'
+						}"
+						class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+						<Label text="{name}" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+						<Label text="{date}" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+					</HBox>
+				</CustomListItem>				
+			</List>	
+		</content>
+	</Page>
+</mvc:View>

@@ -1,0 +1,36 @@
+{
+
+	"list": [
+		{
+			"name": "Lenovo",
+			"date": "2016-06-28 14:10:52",
+			"status": "PENDING",
+			"info": "something goes here..."
+		},
+		{
+			"name": "Starbucks",
+			"date": "2016-06-28 14:10:52",
+			"status": "JOINED",
+			"info": "something goes here..."
+		},
+		{
+			"name": "Coca-cola",
+			"date": "2016-06-28 14:10:52",
+			"status": "JOINED",
+			"info": "something goes here..."
+		},
+		{
+			"name": "Apple",
+			"date": "2016-06-28 14:10:52",
+			"status": "expired",
+			"info": "something goes here..."
+		},
+		{
+			"name": "BMW",
+			"date": "2016-06-28 14:10:52",
+			"status": "PENDING",
+			"info": "something goes here..."
+		}
+		
+	]
+}

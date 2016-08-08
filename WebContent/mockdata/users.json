@@ -1,0 +1,28 @@
+{
+	"users": [
+		{
+			"name": "User 1",
+			"email": "User1@smartcomponents.com",
+			"role": "Outbound Delivery Manager"
+		},
+		{
+			"name": "User 2",
+			"email": "User2@smartcomponents.com",
+			"role": "Inbound Supply Chain Planner"
+		}
+	],
+	"BusinessRole": [
+		{
+			"roleId": 1,
+			"name": "Chief Supply Chain Manager"
+		},
+		{
+			"roleId": 2,
+			"name": "Local Administrator"
+		},
+		{
+			"roleId": 3,
+			"name": "Local Administrator"
+		}
+	]
+}

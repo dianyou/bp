@@ -1,0 +1,68 @@
+<mvc:View 
+	controllerName="SolBP.controller.Console"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core" 	
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m">
+	<Page
+		id="page"
+		title="{i18n>consoleTitle}">
+		<headerContent>
+			<Button icon="sap-icon://person-placeholder" />
+			<Label text="Yafang, Li" />
+		</headerContent>
+		
+		<content>			
+			<GenericTile class="console sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Solution Participant Information" subheader="Show status, leave bucket, etc." frameType="OneByOne"
+			press="press">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://hint"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+			<GenericTile class="console sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Manage Local Users" subheader="Register/lock/delete local users, assign local roles" frameType="OneByOne"
+				press="press">
+				<tileContent>
+					<TileContent>
+						<content>
+							<NumericContent value="12" icon="sap-icon://account"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+			<GenericTile class="console sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Manage Content Areas" frameType="OneByOne"
+			press="press">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://notes"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+			<GenericTile class="console sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Manage Device and External System Integration" subheader="Manage communication systems and settings" frameType="OneByOne"
+			press="press">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://it-system"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+			<GenericTile class="console sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Monitoring and Reporting" subheader="View statistics of local users' activities, etc." frameType="OneByOne"
+			press="press">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://activity-items"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+		</content>
+	</Page>
+</mvc:View>

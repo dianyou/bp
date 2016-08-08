@@ -1,0 +1,87 @@
+.searchField{
+	padding: 10px 20px;
+}
+.listContainer{
+	padding: 10px 20px;
+}
+.inviteBtn{
+	position: absolute;
+	right: 1rem;
+    top: 4rem;    
+}
+.invitationListContainer{
+	
+    display: inline-block;
+}
+.invitationListContainer ul{
+    overflow-y: auto;
+    position: static;
+    display: block;
+}
+.invitationListContainer .searchField{
+	height: 3rem !important;
+    background: transparent !important;
+}
+.invitationListContainer .sapMPanelWrappingDiv{
+	border-bottom: none !important;
+}
+.invitationListContainer .sapMPanelHdr, 
+.invitationListContainer .sapMPanelExpandableIcon{
+	font-size: 0.875rem;
+}
+.invitationListContainer .sapMPanel {
+    overflow: visible !important;
+}
+.invitationListContainer .sapMPanelExpandableIcon {
+	right: -1.5rem !important;
+}
+.invitationListContainer .sapMPanelWrappingDiv .sapMPanelHdr{
+	margin-left: 0.5rem !important;
+}
+.periodListContainer{
+	margin-top: 6rem;
+	height: 30%;
+}
+.periodListContainer .listItem{
+	padding-left: 1rem;
+}
+.memberUnseletable .sapMPanelHdr{
+	color: #9e9e9e !important;
+}
+
+.console .sapMGT:not(.sapMGTHeaderMode) .sapMGTHdrTxt:nth-last-of-type(2) {
+	max-height: none !important;
+}
+.console .sapMTextLineClamp{
+	display: block !important;
+	-webkit-box-orient: block !important;
+}
+.console .sapMGTSubHdrTxt{
+	font-size: 0.8rem !important;
+	
+    white-space: normal !important;
+}
+.console .sapMGTHdrContent {
+    height: 5rem !important;
+}
+.console .sapMImageContentImageIcon{
+	left: 0.5rem;
+	right: initial !important;
+}
+
+.periodContainer{
+	position: fixed;
+    bottom: 3rem;
+    height: 3rem;
+    width: 100%;
+	font-size: 1.125rem;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #333333;
+    line-height: 3rem;
+    padding: 0 1rem;
+    background-color: #def0f2;
+}
+
+.periodContainer .sapMText{
+	font-size: inherit;
+}

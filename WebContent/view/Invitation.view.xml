@@ -1,0 +1,75 @@
+<mvc:View 
+	controllerName="SolBP.controller.Invitation" 
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:semantic="sap.m.semantic">
+	<semantic:FullscreenPage
+		id="page"
+		showNavButton="true"
+		navButtonPress="onNavBack"	
+		busy="{invitationView>/busy}"
+		title="{i18n>invitation}">		
+		<semantic:content>	
+			<List
+				id="list"
+				items="{/list}"
+				headerText="Select Business Partner"				
+				class="invitationListContainer">
+				<infoToolbar>
+					<Toolbar class="searchField">
+						<SearchField
+							liveChange="onSearch"
+							width="30%"/>
+					</Toolbar>
+				</infoToolbar>				
+				<CustomListItem class="listItem">
+					<HBox>
+						<CheckBox enabled="{
+							path: 'status',
+							formatter: '.formatter.memberSelection'
+						}" 
+						class="sapUiSmallMarginBegin"
+						name="{name}"
+						selected="{checkView>/selected}"
+						select="onMemberSelect"/>
+						<core:Icon size="1rem" src="{
+							path: 'status',
+							formatter: '.formatter.memberIcon'
+						}" 
+						color="{
+							path: 'status',
+							formatter: '.formatter.memberIconColor'
+						}"
+						class="sapUiSmallMarginTopBottom"/>
+						<Panel 
+							expandable="true" 
+							expanded="false"
+							headerText="{
+								parts: [
+									'name',
+									'status',
+									'date'
+								],
+								formatter: '.formatter.memberPanelHeader'
+							}">
+							<content>
+								<Text text="{info}"></Text>
+							</content>
+						</Panel>
+					</HBox>
+				</CustomListItem>						
+			</List>
+			<VBox class="periodContainer">
+				<Text text="Invitation Valid Period: 24 hours"/>
+			</VBox>		
+		</semantic:content>
+		<semantic:positiveAction>
+			<semantic:PositiveAction text="Send Invitation" press="onInvitePress"/>
+		</semantic:positiveAction>
+		<semantic:negativeAction>
+			<semantic:NegativeAction text="Cancel" press="onCancelPress"/>
+		</semantic:negativeAction>
+	</semantic:FullscreenPage>
+</mvc:View>
